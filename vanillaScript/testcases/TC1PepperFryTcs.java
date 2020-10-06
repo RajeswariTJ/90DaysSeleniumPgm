@@ -98,7 +98,7 @@ public class TC1PepperFryTcs {
 		File snap = driver.getScreenshotAs(OutputType.FILE);
 		File img = new File("./snaps/img.jpg");
 		FileUtils.copyFile(snap, img);
-		
+		//driver.close();
 		
 	}
 	
