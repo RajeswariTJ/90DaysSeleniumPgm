@@ -147,7 +147,7 @@ public class TC2SnapdealTc {
 		 }else {
 			 System.out.println("Total amount is not equal to sum of both products");
 		 }		
-	
+		//driver.quit();
 	}
 
 }
