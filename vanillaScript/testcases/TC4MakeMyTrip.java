@@ -53,14 +53,14 @@ public class TC4MakeMyTrip {
 		
 		// Enter Check in date as Next month 15th (May 15) and Check out as start date+5
 		Calendar cal = GregorianCalendar.getInstance();
-    	SimpleDateFormat df = new SimpleDateFormat("MMMM yyyy");
-    	Date currentMonth = new Date();
-    	cal.setTime(currentMonth);
+		SimpleDateFormat df = new SimpleDateFormat("MMMM yyyy");
+		Date currentMonth = new Date();
+		cal.setTime(currentMonth);
 
-       	// Add next month
-    	cal.set(Calendar.MONTH, cal.get(Calendar.MONTH)+1);
-    	String nextMonthAsString = df.format(cal.getTime());
-    	String nextMonthInShort = nextMonthAsString.substring(0, 3);
+		// Add next month
+		cal.set(Calendar.MONTH, cal.get(Calendar.MONTH)+1);
+		String nextMonthAsString = df.format(cal.getTime());
+		String nextMonthInShort = nextMonthAsString.substring(0, 3);
      
 		WebElement selectCheckInDate = driver.findElementByXPath("//div[contains(@aria-label,'"+nextMonthInShort+" 15')]");
 		jse.executeScript("arguments[0].click()", selectCheckInDate);
